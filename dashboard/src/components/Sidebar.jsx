@@ -29,7 +29,7 @@ const Sidebar = () => {
 
             <SiShopware/>
 
-            <span> Codex Devware </span>
+            <span> Nexus </span>
             </Link>
 
             {/* menu cancel and show option  */}
