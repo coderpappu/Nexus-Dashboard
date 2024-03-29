@@ -23,6 +23,7 @@ import {
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
+import Sales from "./pages/Sales";
 
 function App() {
   const { activeMenu } = useStateContext();
@@ -69,6 +70,7 @@ function App() {
               <Routes>
                 {/* "Dashboard" */}
                 <Route path="/" element={<Ecommerce />} />
+                <Route path="/sale" element={<Sales />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
 
                 {/* "Pages" */}
