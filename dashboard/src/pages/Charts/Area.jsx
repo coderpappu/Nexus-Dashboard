@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { AreaChart } from "keep-react";
 
-const Area = () => {
+const Area = ({ chartData }) => {
   return (
-    <div>Area</div>
-  )
-}
+    <AreaChart
+      chartData={chartData}
+      dataKey="price"
+      chartType="natural"
+      secondaryDataKey="sell"
+      showTooltip={true}
+      showXaxis={true}
+      showYaxis={true}
+      showGridLine={true}
+    />
+  );
+};
 
-export default Area
+export default Area;

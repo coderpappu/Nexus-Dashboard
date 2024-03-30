@@ -6,6 +6,10 @@ import {
   AiOutlineBarChart,
   AiOutlineStock,
 } from "react-icons/ai";
+import { MdArrowUpward } from "react-icons/md";
+import { MdForward5 } from "react-icons/md";
+
+import { AiOutlineContainer } from "react-icons/ai";
 import {
   FiShoppingBag,
   FiEdit,
@@ -15,6 +19,7 @@ import {
   FiStar,
   FiShoppingCart,
 } from "react-icons/fi";
+
 import {
   BsKanban,
   BsBarChart,
@@ -22,8 +27,10 @@ import {
   BsCurrencyDollar,
   BsShield,
   BsChatLeft,
+  BsPeopleFill,
 } from "react-icons/bs";
-import { BiColorFill } from "react-icons/bi";
+
+import { BiColorFill, BiDownArrowAlt } from "react-icons/bi";
 import { IoMdContacts } from "react-icons/io";
 import { RiContactsLine, RiStockLine } from "react-icons/ri";
 import { MdOutlineSupervisorAccount } from "react-icons/md";
@@ -648,41 +655,49 @@ export const chatData = [
 
 export const earningData = [
   {
-    icon: <MdOutlineSupervisorAccount />,
+    icon: <BsPeopleFill />,
     amount: "39,354",
-    percentage: "-4%",
+    percentage: "4%",
     title: "Customers",
     iconColor: "#03C9D7",
     iconBg: "#E5FAFB",
     pcColor: "red-600",
+    revIcon: <MdArrowUpward />,
+    rColor: "#03C9D7",
   },
   {
     icon: <BsBoxSeam />,
     amount: "4,396",
-    percentage: "+23%",
+    percentage: "23%",
     title: "Products",
     iconColor: "rgb(255, 244, 229)",
     iconBg: "rgb(254, 201, 15)",
     pcColor: "green-600",
+    revIcon: <AiOutlineContainer />,
+    rColor: "rgb(254, 201, 15)",
   },
+
   {
     icon: <FiBarChart />,
-    amount: "423,39",
-    percentage: "+38%",
+    amount: "$423,39",
+    percentage: "38%",
     title: "Sales",
     iconColor: "rgb(228, 106, 118)",
     iconBg: "rgb(255, 244, 229)",
-
     pcColor: "green-600",
+    revIcon: <BiDownArrowAlt />,
+    rColor: "rgb(228, 106, 118)",
   },
   {
     icon: <HiOutlineRefresh />,
     amount: "39,354",
-    percentage: "-12%",
+    percentage: "12%",
     title: "Refunds",
     iconColor: "rgb(0, 194, 146)",
     iconBg: "rgb(235, 250, 242)",
     pcColor: "red-600",
+    revIcon: <MdForward5 />,
+    rColor: "rgb(0, 194, 146)",
   },
 ];
 
@@ -5755,4 +5770,74 @@ export const PieData = [
   { name: "Opera", Value: 36, text: "20%" },
   { name: "Mozila", Value: 32, text: "20%" },
   { name: "Fire fox", Value: 3, text: "20%" },
+];
+export const chartData = [
+  {
+    name: "1",
+    price: 0,
+    sell: 0,
+  },
+  {
+    name: "2",
+    price: 300,
+    sell: 200,
+  },
+  {
+    name: "3",
+    price: 170,
+    sell: 120,
+  },
+  {
+    name: "4",
+    price: 190,
+    sell: 130,
+  },
+  {
+    name: "5",
+    price: 220,
+    sell: 120,
+  },
+  {
+    name: "6",
+    price: 400,
+    sell: 213,
+  },
+  {
+    name: "7",
+    price: 420,
+    sell: 325,
+  },
+  {
+    name: "8",
+    price: 450,
+    sell: 250,
+  },
+  {
+    name: "9",
+    price: 400,
+    sell: 300,
+  },
+  {
+    name: "10",
+    price: 500,
+    sell: 400,
+  },
+  {
+    name: "11",
+    price: 800,
+    sell: 700,
+  },
+];
+
+export const revenueData = [
+  {
+    title: "This Month Profit",
+    amount: "88.4k",
+    activeCard: false,
+  },
+  {
+    title: "Last Month Profit",
+    amount: "98.4k",
+    activeCard: true,
+  },
 ];

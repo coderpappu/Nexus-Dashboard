@@ -8,7 +8,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { CiMail } from "react-icons/ci";
 import avatar from "../data/avatar.jpg";
-import { Cart, Chat, Notification, UserProfile } from ".";
+// import { Cart, Chat, Notification, UserProfile } from ".";
 import { useStateContext } from "../contexts/ContextProvider";
 import { Avatar } from "keep-react";
 import { Button, Popover } from "antd";

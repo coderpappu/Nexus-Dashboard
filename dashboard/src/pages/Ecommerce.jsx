@@ -1,6 +1,5 @@
 import React from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
-import { GoPrimitiveDot } from "react-icons/go";
 import { IoIosMore } from "react-icons/io";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import { Stacked, Pie, Button, LineChart } from "../components";
@@ -42,7 +41,7 @@ const Ecommerce = () => {
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md: w-56 p-4 pt-9 rounded-2xl "
+              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-60 p-4 pt-9 rounded-2xl "
             >
               <button
                 type="button"
