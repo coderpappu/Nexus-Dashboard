@@ -18,8 +18,12 @@ const Sales = () => {
         {/* title */}
         <h1 className="text-xl font-semibold font-inter">Sales Dashboard</h1>
       </div>
-      <div className="flex flex-wrap justify-between mt-4">
-        <div>
+      <div className="flex flex-wrap justify-around mt-4">
+        <div
+          className={`flex flex-wrap  ${
+            activeMenu ? "xl:flex-row " : "xl:flex-col"
+          } 2xl:flex-col justify-around mr-2`}
+        >
           {/* all info  */}
           {earningData.map((data) => (
             <div className="sale">
@@ -42,7 +46,7 @@ const Sales = () => {
         <div
           className={`${
             activeMenu ? "w-[800px]" : "w-[1000px]"
-          } h-[500px]  bg-white p-8 rounded-md mb-6 font`}
+          } h-auto  bg-white p-4 sm:p-8 rounded-md mb-6 font`}
         >
           {/* Heading Section  */}
           <h1 className="text-lg font-semibold mb-6 border-b-1 pb-2">
