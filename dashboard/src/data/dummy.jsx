@@ -524,6 +524,10 @@ export const links = [
         name: "ecommerce",
         icon: <FiShoppingBag />,
       },
+      {
+        name: "sale",
+        icon: <FiShoppingBag />,
+      },
     ],
   },
 
