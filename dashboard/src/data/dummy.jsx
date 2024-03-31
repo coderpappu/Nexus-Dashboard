@@ -521,11 +521,11 @@ export const links = [
     title: "Dashboard",
     links: [
       {
-        name: "ecommerce",
+        name: "sale",
         icon: <FiShoppingBag />,
       },
       {
-        name: "sale",
+        name: "ecommerce",
         icon: <FiShoppingBag />,
       },
     ],
