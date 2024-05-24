@@ -12,6 +12,10 @@ import avatar from "../data/avatar.jpg";
 import { useStateContext } from "../contexts/ContextProvider";
 import { Avatar } from "keep-react";
 import { Button, Popover } from "antd";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 
 let contentData = {
   notification: (
@@ -141,6 +145,19 @@ const Navbar = () => {
     }
   }, [screenSize]);
 
+  // logout system
+  const navigate = useNavigate();
+  const [user, loading, error] = useAuthState(auth);
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
       <NavButton
@@ -186,7 +203,10 @@ const Navbar = () => {
                 Michael{" "}
               </span>
             </p>
-            <MdKeyboardArrowDown className="text-gray-400 text-14 " />
+            <MdKeyboardArrowDown
+              className="text-gray-400 text-14 "
+              onClick={handleLogout}
+            />
           </div>
         </TooltipComponent>
 

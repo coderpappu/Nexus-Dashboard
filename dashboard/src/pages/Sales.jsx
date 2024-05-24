@@ -8,6 +8,7 @@ import RevenueCard from "../components/RevenueCard";
 import { chartData, revenueData } from "../data/dummy.jsx";
 import Area from "./Charts/Area.jsx";
 import { useStateContext } from "../contexts/ContextProvider.jsx";
+import { Toaster } from "react-hot-toast";
 
 const Sales = () => {
   const { activeMenu } = useStateContext();
@@ -63,7 +64,7 @@ const Sales = () => {
               />
             ))}
           </div>
-
+          <Toaster position="bottom-right" reverseOrder={false} />
           {/* chart section  */}
           <Area chartData={chartData} />
         </div>
