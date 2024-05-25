@@ -16,7 +16,8 @@ import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-
+import { PiSignOut } from "react-icons/pi";
+import { IoSettingsOutline } from "react-icons/io5";
 let contentData = {
   notification: (
     <div>
@@ -94,6 +95,14 @@ let contentData = {
   chat: (
     <div>
       <p>No Chat</p>
+    </div>
+  ),
+  profile: (
+    <div>
+      <div>Profile Settings</div>
+      <div className="flex flex-wrap  items-center cursor-pointer">
+        <PiSignOut className="mr-2" /> Sign Out
+      </div>
     </div>
   ),
 };
@@ -191,7 +200,53 @@ const Navbar = () => {
           icon={<RiNotification2Line />}
           content={contentData.notification}
         />
-        <TooltipComponent content={"profile"} position="BottomCenter">
+
+        <Popover
+          placement="bottomLeft"
+          content={
+            <div>
+              <div className="flex flex-wrap  items-center cursor-pointer">
+                <IoSettingsOutline className="mr-2" /> Settings
+              </div>
+
+              <div
+                className="flex flex-wrap  items-center cursor-pointer"
+                onClick={handleLogout}
+              >
+                <PiSignOut className="mr-2" /> Sign Out
+              </div>
+            </div>
+          }
+          trigger="click"
+        >
+          <button
+            type="button"
+            onClick={() => handleClick("Profile")}
+            // style={{ color }}
+            className="relative text-xl rounded-full p-3 hover:bg-light-gray"
+          >
+            <span
+              // style={{ background: "#03C9D7" }}
+              className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2 "
+            />
+
+            <div className="flex flex-wrap">
+              <img
+                src={avatar}
+                className="rounded-full w-9 h-9 border-[#CFD9FF] border-1"
+                alt="profile image"
+              />
+              <p className="ml-1">
+                <span className="text-gray-400 text-14">Hi, </span>{" "}
+                <span className="text-gray-400 font-bold ml-1 text-14">
+                  Michael{" "}
+                </span>
+              </p>
+            </div>
+          </button>
+        </Popover>
+
+        {/* <TooltipComponent position="BottomCenter">
           <div
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
@@ -208,7 +263,7 @@ const Navbar = () => {
               onClick={handleLogout}
             />
           </div>
-        </TooltipComponent>
+        </TooltipComponent> */}
 
         {/* 
      

@@ -2,8 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-
+import { LuEye } from "react-icons/lu";
+import { LuEyeOff } from "react-icons/lu";
+import { useState } from "react";
 const SignInForm = ({ mail, pass, dataLoginHandler, googleHandler }) => {
+  const [password, setPassword] = useState("");
+  const [type, setType] = useState("password");
+  const [icon, setIcon] = useState(LuEyeOff);
+
+  const handleToggle = () => {
+    console.log(type);
+    if (type === "password") {
+      setIcon(LuEye);
+      setType("text");
+    } else {
+      setIcon(LuEyeOff);
+      setType("password");
+    }
+  };
+
   return (
     <div className="w-full md:w-[50%]  h-full pt-6 xl:pt-10 px-3 sm:px-10 md:px-5">
       <p className="absolute right-8 lg:right-3 xl:right-16 text-[#a8a8a8]">
@@ -61,12 +78,26 @@ const SignInForm = ({ mail, pass, dataLoginHandler, googleHandler }) => {
               <label htmlFor="" className="text-md text-[#a8a8a8]">
                 Password
               </label>
-              <Field
-                type="password"
-                name="password"
-                className="w-[100%] h-12 border-1 border-[#ddd]	rounded-[5px] mt-1 mb-3 px-1"
-                placeholder="12345678"
-              />
+              <div className="mb-4 flex">
+                <Field
+                  type={type}
+                  name="password"
+                  autoComplete="current-password"
+                  className="w-[100%] h-12 border-1 border-[#ddd]	rounded-[5px] mt-1 mb-3 px-1"
+                  placeholder="12345678"
+                />
+                <span
+                  className="flex justify-around items-center"
+                  onClick={handleToggle}
+                >
+                  {type !== "password" ? (
+                    <LuEye className="absolute mr-10" />
+                  ) : (
+                    <LuEyeOff className="absolute mr-10" />
+                  )}
+                </span>
+              </div>
+
               <ErrorMessage
                 name="password"
                 component="div"

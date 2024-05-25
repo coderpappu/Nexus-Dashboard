@@ -23,7 +23,6 @@ import {
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
-import Sales from "./pages/Sales";
 
 const Layout = () => {
   const { activeMenu } = useStateContext();

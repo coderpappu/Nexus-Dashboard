@@ -23,7 +23,8 @@ import {
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
-import Sales from "./pages/Sales";
+import Sales from "./pages/dashboard/Sales";
+import Analytics from "./pages/dashboard/Analytics";
 import Login from "./pages/Login";
 // import Dashboard from "./Dashboard";
 import Layout from "./Layout";
@@ -39,6 +40,7 @@ function App() {
             <Route path="/" element={<Layout />}>
               <Route path="/" element={<Sales />} />
               <Route path="/sale" element={<Sales />} />
+              <Route path="/analytics" element={<Analytics />} />
               <Route path="/ecommerce" element={<Ecommerce />} />
 
               {/* "Pages" */}

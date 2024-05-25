@@ -12,6 +12,8 @@ module.exports = {
       display: ["Open Sans", "sans-serif"],
       body: ["Open Sans", "sans-serif"],
       inter: ["Inter", "sans-serif"],
+      roboto: ["Roboto", "sans-serif"],
+      public: ["Public Sans"],
     },
     extend: {
       fontSize: {

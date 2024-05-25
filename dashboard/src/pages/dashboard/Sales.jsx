@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { BsPeopleFill } from "react-icons/bs";
 import { IoIosArrowRoundUp } from "react-icons/io";
-import SaleCard from "../components/SaleCard";
-import { earningData } from "../data/dummy";
-
-import RevenueCard from "../components/RevenueCard";
-import { chartData, revenueData } from "../data/dummy.jsx";
-import Area from "./Charts/Area.jsx";
-import { useStateContext } from "../contexts/ContextProvider.jsx";
+import SaleCard from "../../components/SaleCard.jsx";
+import { earningData } from "../../data/dummy.jsx";
+import RevenueCard from "../../components/RevenueCard.jsx";
+import { chartData, revenueData } from "../../data/dummy.jsx";
+import Area from "../Charts/Area.jsx";
+import { useStateContext } from "../../contexts/ContextProvider.jsx";
 import { Toaster } from "react-hot-toast";
 
 const Sales = () => {
