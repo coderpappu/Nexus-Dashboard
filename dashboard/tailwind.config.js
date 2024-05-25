@@ -1,11 +1,10 @@
 import keepPreset from "keep-react/preset";
-
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    // "node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
+    "node_modules/keep-react/**/*.{js,jsx,ts,tsx}",
   ],
-  // presets: [keepPreset],
+  presets: [keepPreset],
   darkMode: "class",
   theme: {
     fontFamily: {
