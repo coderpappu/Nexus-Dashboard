@@ -3,6 +3,9 @@ import { useStateContext } from "../../contexts/ContextProvider.jsx";
 import CardImg from "../../data/card-website-analytics-1.png";
 import CardHead from "../../components/analytics/webAnalytics/CardHead.jsx";
 import AnalyticsData from "../../components/analytics/webAnalytics/AnalyticsData.jsx";
+// import autoPlay from "embla-carousel-autoplay";
+import { Carousel } from "keep-react";
+
 const Analytics = () => {
   const { activeMenu } = useStateContext();
 
@@ -27,6 +30,28 @@ const Analytics = () => {
             <img src={CardImg} alt="card_image" className="w-full h-auto" />
           </div>
         </div>
+
+        {/* SLIDER CHECK  */}
+        <Carousel options={{ loop: true }} plugins={[autoPlay()]}>
+          <Carousel.Slides>
+            {Array.from({ length: 5 }).map((_, index) => (
+              <Carousel.Item key={index}>
+                <div className="flex items-center justify-center rounded-xl border border-metal-100 bg-primary-25 p-20">
+                  <h1 className="text-heading-1 font-medium text-metal-900">
+                    {index + 1}
+                  </h1>
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel.Slides>
+          <Carousel.Control>
+            <Carousel.Buttons>
+              <Carousel.PrevButton />
+              <Carousel.NextButton />
+            </Carousel.Buttons>
+            <Carousel.Indicators />
+          </Carousel.Control>
+        </Carousel>
       </div>
     </div>
   );
