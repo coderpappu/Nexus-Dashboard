@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardHead = () => {
+const CardHead = ({ title }) => {
   return (
     <>
       <h2 className="text-lg pt-2 font-medium text-[white]">
@@ -10,7 +10,7 @@ const CardHead = () => {
         Total 25.5% Coversion Rate
       </p>
 
-      <h1 className="text-sm mt-6 text-[#fff] font-semibold ">Traffic</h1>
+      <h1 className="text-sm mt-6 text-[#fff] font-semibold ">{title}</h1>
     </>
   );
 };

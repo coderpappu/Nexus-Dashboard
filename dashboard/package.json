@@ -29,6 +29,7 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "recharts": "^2.12.7",
     "vite": "^5.2.7"
   },
   "scripts": {
