@@ -13,7 +13,7 @@ const Analytics = () => {
       {/* First row */}
       <div className="flex flex-wrap justify-around w-full overflow-hidden relative">
         {/* Website analytics */}
-        <div className="w-[320px] md:w-[700px] lg:w-[900px] xl:w-[560px] 2xl:w-[700px] my-2 ">
+        <div className="w-[320px] md:w-[700px] lg:w-[900px] xl:w-[560px] 2xl:w-[600px] my-2 ">
           <WebCardAnalytics />
         </div>
 

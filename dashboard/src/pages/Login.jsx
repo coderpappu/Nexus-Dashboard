@@ -10,7 +10,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   const signWithEmailAndPassword = async (email, password) => {
-    console.log(email, password);
     try {
       let user = await loginWithEmailAndPassword(email, password);
       toast.success("Login Success");
