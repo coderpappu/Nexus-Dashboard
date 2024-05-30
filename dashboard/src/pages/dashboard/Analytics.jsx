@@ -13,17 +13,17 @@ const Analytics = () => {
       {/* First row */}
       <div className="flex flex-wrap justify-around w-full overflow-hidden relative">
         {/* Website analytics */}
-        <div className="w-[585px]">
+        <div className="w-[320px] md:w-[700px] lg:w-[900px] xl:w-[560px] 2xl:w-[700px] my-2 ">
           <WebCardAnalytics />
         </div>
 
         {/* Sales And overview Section  */}
-        <div className="w-[360px] h-[250px] bg-white p-8 rounded-sm ">
+        <div className="w-[300px] md:w-[320px] lg:w-[400px] xl:w-[250px] 2xl:w-[400px] h-[250px] bg-white p-8 my-2 rounded-sm ">
           <SalesOverview />
         </div>
 
         {/* Sale and revenue overview */}
-        <div className="w-[360px] h-[250px] bg-white   rounded-sm ">
+        <div className="w-[300px]  md:w-[320px] lg:w-[400px] xl:w-[250px]  2xl:w-[400px] h-[250px] overflow-hidden my-2 bg-white   rounded-sm ">
           <Revenue />
         </div>
       </div>

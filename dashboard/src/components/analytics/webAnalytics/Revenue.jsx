@@ -13,7 +13,7 @@ const chartData = [
 const Revenue = () => {
   return (
     <>
-      <div className="px-4 pt-4">
+      <div className="px-4 pt-4  h-[32%]">
         <div className="w-9 h-9 rounded-full bg-[#DFF7E9] p-2 text-center">
           <BsCalendarEvent className="text-[#35CA78] ml-[2px] mt-[0.5px]" />
         </div>
@@ -22,7 +22,7 @@ const Revenue = () => {
         <p className="text-xs text-[#a5a3ae]">Revenue Generated</p>
       </div>
 
-      <div className="w-[360px] h-[150px]">
+      <div className=" h-[70%]">
         <ResponsiveContainer width="100%" height="100%" className="">
           <AreaChart data={chartData}>
             {/* <Tooltip /> */}

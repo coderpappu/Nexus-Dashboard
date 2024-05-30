@@ -35,9 +35,9 @@ const WebCardAnalytics = () => {
       <Carousel.Slides>
         {webData.map((item, index) => (
           <Carousel.Item key={index}>
-            <div className="w-[570px] h-[250px]  rounded-md p-4 bg-[#7367F0] flex flex-wrap justify-between items-center">
+            <div className="md:h-[250px] rounded-md p-4 bg-[#7367F0] flex flex-wrap justify-between items-center">
               {/* Web Analytics left */}
-              <div className="w-[60%] h-full">
+              <div className="w-full md:w-[60%] h-full">
                 {/* Analytics Heading and para */}
                 <CardHead title={item.title} />
                 {/* Analytics Data Show section */}
@@ -47,7 +47,7 @@ const WebCardAnalytics = () => {
                 </div>
               </div>
               {/* Web Analytics right */}
-              <div className="w-[40%] h-full p-2 flex justify-center items-center">
+              <div className="md:w-[40%]  lg:w-[33%] xl:w-[40%] h-full p-2 flex justify-center items-center">
                 <img
                   src={CardImg}
                   alt="card_image"

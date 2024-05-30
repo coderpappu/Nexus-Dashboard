@@ -3,7 +3,7 @@ import React from "react";
 const CardHead = ({ title }) => {
   return (
     <>
-      <h2 className="text-lg pt-2 font-medium text-[white]">
+      <h2 className="text-lg lg:text-xl pt-2 font-medium text-[white]">
         Website Analytics
       </h2>
       <p className="text-xs font-medium mt-1 text-[white] ">
