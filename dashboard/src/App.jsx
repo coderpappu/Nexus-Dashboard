@@ -30,6 +30,7 @@ import Login from "./pages/Login";
 import Layout from "./Layout";
 import Register from "./pages/register";
 import PrivateRoute from "./route/PrivateRoute";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/*" element={<NotFound />} />
           {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         </Routes>
       </BrowserRouter>
