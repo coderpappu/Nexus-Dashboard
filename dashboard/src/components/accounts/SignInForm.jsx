@@ -35,7 +35,7 @@ const SignInForm = ({ mail, pass, dataLoginHandler, googleHandler }) => {
 
       <div className="py-4 md:w-full lg:w-[400px]">
         <Formik
-          initialValues={{ email: "", password: "" }}
+          initialValues={{ email: "coder@gmail.com", password: "12345678" }}
           validate={(values) => {
             const errors = {};
             if (!values.email) {

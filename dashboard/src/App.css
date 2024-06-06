@@ -67,6 +67,16 @@
 .dot:nth-child(3) {
   animation-delay: -0.15s;
 }
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
 
 @keyframes bounce {
   0%,

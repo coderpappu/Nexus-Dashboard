@@ -4,7 +4,8 @@ import CardHead from "./CardHead";
 import AnalyticsData from "./AnalyticsData.jsx";
 import autoPlay from "embla-carousel-autoplay";
 import { Carousel } from "keep-react";
-
+import useEmblaCarousel from "embla-carousel-react";
+import Fade from "embla-carousel-fade";
 const webData = [
   {
     title: "Spending",
@@ -30,11 +31,12 @@ const webData = [
 ];
 
 const WebCardAnalytics = () => {
+  const [emblaRef] = useEmblaCarousel({ loop: true });
   return (
-    <Carousel options={{ loop: true }} plugins={[autoPlay()]}>
-      <Carousel.Slides>
+    <div className="embla" ref={emblaRef}>
+      <div className="embla__container">
         {webData.map((item, index) => (
-          <Carousel.Item key={index}>
+          <div className="embla__slide">
             <div className="md:h-[250px] rounded-md p-4 bg-[#7367F0] flex flex-wrap justify-between items-center">
               {/* Web Analytics left */}
               <div className="w-full md:w-[60%] h-full">
@@ -55,10 +57,10 @@ const WebCardAnalytics = () => {
                 />
               </div>
             </div>
-          </Carousel.Item>
+          </div>
         ))}
-      </Carousel.Slides>
-    </Carousel>
+      </div>
+    </div>
   );
 };
 
