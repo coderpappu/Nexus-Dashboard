@@ -61,24 +61,24 @@ const Analytics = () => {
       {/* First row */}
       <div className="flex flex-wrap justify-between w-full overflow-hidden relative">
         {/* Website analytics */}
-        <div className="w-[320px] md:w-[700px] lg:w-[900px] xl:w-[560px] 2xl:w-[600px] my-2 overflow-hidden">
+        <div className="w-[320px] md:w-[700px] lg:w-[900px] xl:w-[560px] 2xl:w-[550px] my-2 overflow-hidden">
           <WebCardAnalytics />
         </div>
 
         {/* Sales And overview Section  */}
-        <div className="w-[300px] md:w-[320px] lg:w-[400px] xl:w-[250px] 2xl:w-[400px] h-[250px] bg-white p-8 my-2 rounded-sm ">
+        <div className="w-[300px] md:w-[320px] lg:w-[400px] xl:w-[250px] 2xl:w-[300px] h-[250px] bg-white p-8 my-2 rounded-sm ">
           <SalesOverview />
         </div>
 
         {/* Sale and revenue overview */}
-        <div className="w-[300px]  md:w-[320px] lg:w-[400px] xl:w-[250px]  2xl:w-[400px] h-[250px] overflow-hidden my-2 bg-white   rounded-sm ">
+        <div className="w-[300px]  md:w-[320px] lg:w-[400px] xl:w-[250px]  2xl:w-[300px] h-[250px] overflow-hidden my-2 bg-white   rounded-sm ">
           <Revenue />
         </div>
       </div>
 
       {/* 2nd row  */}
-      <div className="flex flex-wrap my-5">
-        <div className="w-[600px] h-auto bg-white p-4 rounded-md">
+      <div className="flex flex-wrap justify-between my-5">
+        <div className="w-[300px] lg:w-[700px] h-auto bg-white p-4 rounded-md">
           <div className="mb-6 md:mb-0">
             <h2 className="text-lg font-medium text-[#5D596C]">
               Earning Reports
@@ -87,7 +87,7 @@ const Analytics = () => {
               Weekly Earning Overview
             </p>
           </div>
-          <div className="flex flex-wrap w-full justify-between ">
+          <div className="flex flex-wrap w-full justify-between">
             <div className="w-full md:w-[40%] h-auto mb-5 md:mb-0 mt-auto ">
               <div className="flex flex-wrap items-center mb-4">
                 <h2 className="font-medium text-4xl  text-[#5D596C]">$256</h2>
@@ -103,7 +103,7 @@ const Analytics = () => {
             <div className="w-full md:w-[60%] ">
               <BarChart
                 height={200}
-                width={350}
+                width={300}
                 dataKey="price"
                 chartData={BarChartData}
                 barRadius={[4, 4, 0, 0]}

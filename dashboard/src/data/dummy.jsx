@@ -29,6 +29,8 @@ import {
   BsChatLeft,
   BsPeopleFill,
 } from "react-icons/bs";
+import { FiBarChart2 } from "react-icons/fi";
+import { GrAnalytics } from "react-icons/gr";
 
 import { BiColorFill, BiDownArrowAlt } from "react-icons/bi";
 import { IoMdContacts } from "react-icons/io";
@@ -521,8 +523,12 @@ export const links = [
     title: "Dashboard",
     links: [
       {
+        name: "Analytics",
+        icon: <GrAnalytics />,
+      },
+      {
         name: "sale",
-        icon: <FiShoppingBag />,
+        icon: <FiBarChart2 />,
       },
       {
         name: "ecommerce",
